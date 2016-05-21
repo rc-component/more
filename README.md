@@ -4,7 +4,7 @@ rc-more Component for [react](https://facebook.github.io/react/).
 
 Build with [webpack](https://webpack.github.io/) and [CSS Modules](https://github.com/css-modules/css-modules)
 
-[Story book](https://rc-component.github.io/rc-more/)
+[Story book](https://rc-component.github.io/more/)
 
 ## Install
 
