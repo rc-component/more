@@ -6,6 +6,8 @@ Build with [webpack](https://webpack.github.io/) and [CSS Modules](https://githu
 
 [Story book](https://rc-component.github.io/more/)
 
+Scrollable element should have `scrollable` className or `window` is used for scroll event listening.
+
 ## Install
 
     npm i rc-more -S
