@@ -28,7 +28,6 @@ disable | boolean| false      | disale more
 *callback|func | | callback function for laoding
 spinnerType | string | gray   | type of ispinner
 useIspinner | boolean | true | set to false to use children of More instead of
-ispinner
 
 Use `props.style` and `props.className` for apply style to more element.
 
