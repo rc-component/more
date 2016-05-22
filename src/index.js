@@ -11,14 +11,12 @@ import classes from 'classes'
 class More extends React.Component {
   static defaultProps = {
     disable: false,
-    useIspinner: true,
     spinnerType: 'gray'
   }
   static propTypes = {
     spinnerType: React.PropTypes.oneOf(['white', 'gray']),
     disable: React.PropTypes.bool,
-    callback: React.PropTypes.func.isRequired,
-    useIspinner: React.PropTypes.bool
+    callback: React.PropTypes.func.isRequired
   }
   constructor(props) {
     super(props)
@@ -53,14 +51,14 @@ class More extends React.Component {
     let className = cx(style.more, props.className)
     let display = props.disable ? 'none' : 'block'
     let children
-    if (props.useIspinner === false) {
+    if (props.children) {
       children = props.children
     } else {
       children = <div className={style.center}>
-                  <Ispinner
-                    animating={!props.disable}
-                    type={props.spinnerType}
-                    width={this.height}/>
+                    <Ispinner
+                      animating={!props.disable}
+                      type={props.spinnerType}
+                      width={this.height}/>
                 </div>
     }
     return (
