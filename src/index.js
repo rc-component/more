@@ -11,12 +11,14 @@ import classes from 'classes'
 class More extends React.Component {
   static defaultProps = {
     disable: false,
+    useIspinner: true,
     spinnerType: 'gray'
   }
   static propTypes = {
     spinnerType: React.PropTypes.oneOf(['white', 'gray']),
     disable: React.PropTypes.bool,
-    callback: React.PropTypes.func.isRequired
+    callback: React.PropTypes.func.isRequired,
+    useIspinner: React.PropTypes.bool
   }
   constructor(props) {
     super(props)
@@ -37,11 +39,11 @@ class More extends React.Component {
     this.el.style.visibility = 'visible'
     let self = this
     this.loading = true
-    var cb = function () {
+    let cb = function () {
       self.loading = false
       self.el.style.visibility = 'hidden'
     }
-    var res = this.props.callback(cb)
+    let res = this.props.callback(cb)
     if (res && typeof res.then === 'function') {
       res.then(cb, cb)
     }
@@ -50,14 +52,20 @@ class More extends React.Component {
     let props = this.props
     let className = cx(style.more, props.className)
     let display = props.disable ? 'none' : 'block'
+    let children
+    if (props.useIspinner === false) {
+      children = props.children
+    } else {
+      children = <div className={style.center}>
+                  <Ispinner
+                    animating={!props.disable}
+                    type={props.spinnerType}
+                    width={this.height}/>
+                </div>
+    }
     return (
       <div className={className} style={{display: display}}>
-        <div className={style.center}>
-          <Ispinner
-            animating={!props.disable}
-            type={props.spinnerType}
-            width={this.height}/>
-        </div>
+        {children}
       </div>
     )
   }

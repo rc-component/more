@@ -55,3 +55,14 @@ storiesOf('More', module)
     })
     return React.createElement(List)
   })
+  .add('my children', () => {
+    return (
+      <Iscroll style={{height: 200, width: 100, position: 'relative'}}>
+        <div style={boxStyles}>
+        </div>
+        <More callback={callback} useIspinner={false}>
+          <span>loading</span>
+        </More>
+      </Iscroll>
+    )
+  })
