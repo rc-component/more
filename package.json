@@ -1,11 +1,11 @@
 {
   "name": "rc-more",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "more Component for react",
   "keywords": [
     "loading",
     "more",
-    "react"
+    "react-component"
   ],
   "repository": {
     "type": "git",
