@@ -1,10 +1,10 @@
 .more {
-  padding:  5px 0px;
+  padding: 5px 0;
   font-size: 14px;
   font-weight: 300;
   text-align: center;
   color: #666;
-  visibility: visible;
+  visibility: hidden;
   height: 30px;
   box-sizing: border-box;
 }
