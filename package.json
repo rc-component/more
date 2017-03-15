@@ -62,7 +62,7 @@
     "component-event": "^0.1.4",
     "debounce": "^1.0.0",
     "page-offset": "0.0.3",
-    "rc-ispinner": "0.0.2",
+    "rc-ispinner": "0.0.4",
     "react": "^15.1.0",
     "react-dom": "^15.0.0"
   },
