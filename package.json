@@ -1,5 +1,5 @@
 {
-  "name": "rc-more",
+  "name": "1.0.0",
   "version": "0.0.9",
   "description": "more Component for react",
   "keywords": [
@@ -49,8 +49,7 @@
     "postcss-cssnext": "^2.5.2",
     "postcss-loader": "^0.9.1",
     "raw-loader": "^0.5.1",
-    "rc-iscroll": "0.0.3",
-    "react": "^15.0.0",
+    "rc-iscroll": "^1.0.1",
     "react-addons-test-utils": "^15.0.0",
     "sinon": "^1.17.3",
     "style-loader": "^0.13.1",
@@ -62,11 +61,13 @@
     "component-event": "^0.1.4",
     "debounce": "^1.0.0",
     "page-offset": "0.0.3",
-    "rc-ispinner": "0.0.4",
-    "react": "^15.1.0",
-    "react-dom": "^15.0.0"
+    "prop-types": "^15.5.10",
+    "rc-ispinner": "^1.0.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   },
   "main": "dist/index.js",
+  "esnext": "src/index.js",
   "engines": {
     "npm": "^3.0.0"
   },

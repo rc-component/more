@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import offset from 'page-offset'
 import style from './style.css'
+import PropTypes from 'prop-types'
 import Ispinner from 'rc-ispinner'
 import cx from 'classnames'
 import debounce from 'debounce'
@@ -14,9 +15,9 @@ class More extends React.Component {
     spinnerType: 'gray'
   }
   static propTypes = {
-    spinnerType: React.PropTypes.oneOf(['white', 'gray']),
-    disable: React.PropTypes.bool,
-    callback: React.PropTypes.func.isRequired
+    spinnerType: PropTypes.oneOf(['white', 'gray']),
+    disable: PropTypes.bool,
+    callback: PropTypes.func.isRequired
   }
   constructor(props) {
     super(props)
@@ -34,8 +35,8 @@ class More extends React.Component {
   onscroll() {
     if (this.loading || this.props.disable) return
     if (!check(this.scrollable)) return
-    this.el.style.visibility = 'visible'
     let self = this
+    this.el.style.visibility = 'visible'
     this.loading = true
     let cb = function () {
       self.loading = false

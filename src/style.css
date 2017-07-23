@@ -1,11 +1,11 @@
 .more {
+  height: 30px;
   padding: 5px 0;
   font-size: 14px;
   font-weight: 300;
   text-align: center;
   color: #666;
   visibility: hidden;
-  height: 30px;
   box-sizing: border-box;
 }
 

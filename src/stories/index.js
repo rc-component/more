@@ -11,7 +11,7 @@ const boxStyles = {
 
 let callback = () => {
   return new Promise(function (resolve) {
-    setTimeout(resolve, 1000)
+    setTimeout(resolve, 5000)
   })
 }
 
@@ -20,7 +20,8 @@ storiesOf('More', module)
     let List = React.createClass({
       render: function () {
           return (
-          <Iscroll style={{height: 200, width: 100, position: 'relative'}}>
+          <Iscroll handlebar={false}
+            style={{height: 200, width: 100, position: 'relative'}}>
             <div style={boxStyles}>
             </div>
             <More callback={callback}/>
@@ -44,7 +45,9 @@ storiesOf('More', module)
           return (
           <div>
             <button onClick={this.toggleState}>toggle</button>
-            <Iscroll style={{height: 200, width: 100, position: 'relative'}}>
+            <Iscroll style={{height: 200, width: 100, position: 'relative'}}
+              handlebar={false}
+            >
               <div style={boxStyles}>
               </div>
               <More callback={callback} disable={this.state.disable}/>
@@ -57,7 +60,9 @@ storiesOf('More', module)
   })
   .add('my children', () => {
     return (
-      <Iscroll style={{height: 200, width: 100, position: 'relative'}}>
+      <Iscroll style={{height: 200, width: 100, position: 'relative'}}
+        handlebar={false}
+      >
         <div style={boxStyles}>
         </div>
         <More callback={callback} useIspinner={false}>
