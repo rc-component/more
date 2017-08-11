@@ -16,7 +16,7 @@ Scrollable element should have `scrollable` className or `window` is used for sc
 
 ```
 <More
-  disale={this.state.disable}
+  disable={this.state.disable}
   callback={this.load} />
 ```
 
